@@ -205,19 +205,19 @@ def install():
             for dep in APT_INSTALL_LIST:
                 do(msg=f"install {dep}", cmd=f'sudo apt-get install {dep} -y')
             #
-            if 'libttspico-utils' not in APT_INSTALL_LIST:
-                _pool = 'http://ftp.debian.org/debian/pool/non-free/s/svox/'
-                if raspbain_version >= 12:
-                    libttspico= 'libttspico0t64_1.0+git20130326-14.1_armhf.deb'
-                    libttspico_utils = 'libttspico-utils_1.0+git20130326-14.1_armhf.deb'
-                elif raspbain_version < 12:
-                    libttspico = 'libttspico0_1.0+git20130326-11_armhf.deb'
-                    libttspico_utils = 'libttspico-utils_1.0+git20130326-11_armhf.deb'
-                do(msg="install pico2wave",
-                   cmd=f'wget {_pool}{libttspico}' +
-                   f' &&wget {_pool}{libttspico_utils}' +
-                   f' && sudo apt-get install -f ./{libttspico} ./{libttspico_utils} -y'
-                   )
+#            if 'libttspico-utils' not in APT_INSTALL_LIST:
+#                _pool = 'http://ftp.debian.org/debian/pool/non-free/s/svox/'
+#                if raspbain_version >= 12:
+#                    libttspico= 'libttspico0t64_1.0+git20130326-14.1_armhf.deb'
+#                    libttspico_utils = 'libttspico-utils_1.0+git20130326-14.1_armhf.deb'
+#                elif raspbain_version < 12:
+#                    libttspico = 'libttspico0_1.0+git20130326-11_armhf.deb'
+#                    libttspico_utils = 'libttspico-utils_1.0+git20130326-11_armhf.deb'
+#                do(msg="install pico2wave",
+#                   cmd=f'wget {_pool}{libttspico}' +
+#                   f' &&wget {_pool}{libttspico_utils}' +
+#                   f' && sudo apt-get install -f ./{libttspico} ./{libttspico_utils} -y'
+#                   )
             # --------------------------------
             print("Install dependencies with pip3:")
             # check whether pip has the option "--break-system-packages"
