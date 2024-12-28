@@ -145,9 +145,9 @@ def do(msg="", cmd=""):
                       (msg, status, result))
 
 
-def check_raspbain_version():
-    _, result = run_command("cat /etc/debian_version|awk -F. '{print $1}'")
-    return int(result.strip())
+#def check_raspbain_version():
+#    _, result = run_command("cat /etc/debian_version|awk -F. '{print $1}'")
+#    return int(result.strip())
 
 
 def check_os_bit():
@@ -163,7 +163,8 @@ def check_os_bit():
     return int(os_bit)
 
 
-raspbain_version = check_raspbain_version()
+#raspbain_version = check_raspbain_version()
+raspbain_version = 13
 os_bit = check_os_bit()
 
 APT_INSTALL_LIST = [
