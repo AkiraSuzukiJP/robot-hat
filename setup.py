@@ -168,7 +168,7 @@ raspbain_version = 13
 os_bit = check_os_bit()
 
 APT_INSTALL_LIST = [
-    'raspi-config',
+#    'raspi-config',
     "i2c-tools",
     "espeak",
     'libsdl2-dev',
