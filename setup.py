@@ -239,9 +239,9 @@ def install():
 
         # Setup interfaces
         # =============================
-        print("Setup interfaces")
-        do(msg="turn on I2C", cmd='sudo raspi-config nonint do_i2c 0')
-        do(msg="turn on SPI", cmd='sudo raspi-config nonint do_spi 0')
+#        print("Setup interfaces")
+#        do(msg="turn on I2C", cmd='sudo raspi-config nonint do_i2c 0')
+#        do(msg="turn on SPI", cmd='sudo raspi-config nonint do_spi 0')
 
         # Copy servohat dtoverlay
         # =============================
